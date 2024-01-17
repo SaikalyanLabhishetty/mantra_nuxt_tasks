@@ -1,17 +1,17 @@
 <template>
-    <div>
-      <h2>Student Data</h2>
-      <div class="form">
-        <form @submit.prevent="register">
-          <label for="username">Username</label>
-          <input id="username" v-model="username"><br/>
-          <label for="password">Password</label>
-          <input id="password" type="password" v-model="password"><br/>
-          <button type="submit">Register</button>
-        </form>
-      </div>
+  <div>
+    <h2 class="text-center">Student Data</h2>
+    <div class="form">
+      <form @submit.prevent="register" class="flex flex-col">
+        <label for="username">Username</label>
+        <input id="username" v-model="username" class="h-12 border mb-4"><br/>
+        <label for="password">Password</label>
+        <input id="password" type="password" v-model="password" class="h-12 border mb-4"><br/>
+        <button type="submit" class="bg-blue-500 h-12 text-white font-base cursor-pointer">Register</button>
+      </form>
     </div>
-  </template>
+  </div>
+</template>
   
   <script setup>
   import { ref } from 'vue'
@@ -30,22 +30,3 @@
   </script>
   
  
-<style scoped>
-form {
-  display: flex;
-  flex-direction: column;
-}
-input {
-  height: 30px;
-}
-.form button {
-  background-color: rgb(44, 100, 165);
-  height: 50px;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-}
-h2 {
-  text-align: center;
-}
-</style>
